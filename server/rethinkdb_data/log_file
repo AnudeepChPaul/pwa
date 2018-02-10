@@ -1,0 +1,25 @@
+2018-02-10T12:22:37.965692869 0.060882s notice: Recursively removing directory /home/coder/code/server/rethinkdb_data/tmp
+2018-02-10T12:22:37.990591894 0.085779s notice: Initializing directory /home/coder/code/server/rethinkdb_data
+2018-02-10T12:22:37.990782669 0.085970s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/coder/code/server/rethinkdb_data' did not already exist or is empty.)
+2018-02-10T12:22:37.990873059 0.086060s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2018-02-10T12:22:37.997510402 0.092702s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-10T12:22:37.997672202 0.092859s notice: Loading data from directory /home/coder/code/server/rethinkdb_data
+2018-02-10T12:22:38.340713504 0.435901s info: Automatically using cache size of 369 MB
+2018-02-10T12:22:38.347332474 0.442520s error: TCP socket creation failed for port 29015: Address already in use.
+2018-02-10T12:31:11.844162594 0.032343s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2018-02-10T12:31:11.848903702 0.037087s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-10T12:31:11.849038697 0.037219s notice: Loading data from directory /home/coder/code/server/rethinkdb_data
+2018-02-10T12:31:11.962591968 0.150772s info: Automatically using cache size of 350 MB
+2018-02-10T12:31:11.966503396 0.154683s notice: Listening for intracluster connections on port 29015
+2018-02-10T12:31:11.968334585 0.156514s notice: Listening for client driver connections on port 28015
+2018-02-10T12:31:11.968547092 0.156727s notice: Listening for administrative HTTP connections on port 8080
+2018-02-10T12:31:11.968561736 0.156741s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-02-10T12:31:11.968568108 0.156748s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-02-10T12:31:11.968580150 0.156760s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-02-10T12:31:11.968586349 0.156766s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-10T12:31:11.968598112 0.156778s notice: Server ready, "pheonixfury_xit" 22d6fd9d-559d-4bcc-bc86-93e184367185
+2018-02-10T12:31:27.315241949 15.503423s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-10T12:31:27.315509764 15.503690s notice: Shutting down client connections...
+2018-02-10T12:31:27.315822883 15.504003s notice: All client connections closed.
+2018-02-10T12:31:27.315969189 15.504149s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-10T12:31:27.316618565 15.504799s notice: Storage engine shut down.

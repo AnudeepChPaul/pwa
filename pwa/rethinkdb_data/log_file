@@ -1,0 +1,36 @@
+2018-02-09T01:27:27.857667234 0.062553s notice: Recursively removing directory /home/coder/code/pwa/rethinkdb_data/tmp
+2018-02-09T01:27:27.882376935 0.087261s notice: Initializing directory /home/coder/code/pwa/rethinkdb_data
+2018-02-09T01:27:27.882481950 0.087366s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/coder/code/pwa/rethinkdb_data' did not already exist or is empty.)
+2018-02-09T01:27:27.882528197 0.087413s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2018-02-09T01:27:27.886968625 0.091862s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-09T01:27:27.887169587 0.092054s notice: Loading data from directory /home/coder/code/pwa/rethinkdb_data
+2018-02-09T01:27:28.186341937 0.391227s info: Automatically using cache size of 449 MB
+2018-02-09T01:27:28.188320839 0.393206s notice: Listening for intracluster connections on port 29015
+2018-02-09T01:27:28.191532196 0.396417s notice: Listening for client driver connections on port 28015
+2018-02-09T01:27:28.191848191 0.396733s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T01:27:28.191867435 0.396751s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-02-09T01:27:28.191873185 0.396757s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-02-09T01:27:28.191885176 0.396769s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-02-09T01:27:28.191891551 0.396775s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T01:27:28.191903042 0.396787s notice: Server ready, "pheonixfury_kbr" ef3a4b62-3e6e-4bf7-8057-73cb8e35b0e0
+2018-02-09T01:27:29.255313281 1.460199s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-09T01:27:29.255825823 1.460711s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T01:27:29.256047028 1.460932s notice: Shutting down client connections...
+2018-02-09T01:27:29.256293472 1.461178s notice: All client connections closed.
+2018-02-09T01:27:29.256304593 1.461189s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-09T01:27:29.256964309 1.461849s notice: Storage engine shut down.
+2018-02-09T01:27:36.803563234 0.007957s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2018-02-09T01:27:36.806787741 0.011184s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-09T01:27:36.806916895 0.011310s notice: Loading data from directory /home/coder/code/pwa/rethinkdb_data
+2018-02-09T01:27:36.882248062 0.086641s info: Automatically using cache size of 449 MB
+2018-02-09T01:27:36.883158315 0.087552s notice: Listening for intracluster connections on port 29015
+2018-02-09T01:27:36.885678815 0.090072s notice: Listening for client driver connections on port 28015
+2018-02-09T01:27:36.885842152 0.090235s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T01:27:36.885845806 0.090239s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-02-09T01:27:36.885850927 0.090244s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-02-09T01:27:36.885854387 0.090247s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-02-09T01:27:36.885859198 0.090252s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T01:27:36.885864571 0.090257s notice: Server ready, "pheonixfury_kbr" ef3a4b62-3e6e-4bf7-8057-73cb8e35b0e0
+2018-02-09T01:27:48.867224148 12.071618s info: Table 2cf18218-ebb0-46a1-938f-350e8eb75cbd: Starting a new Raft election for term 1.
+2018-02-09T01:27:48.867682500 12.072077s info: Table 2cf18218-ebb0-46a1-938f-350e8eb75cbd: Added replica on this server.
+2018-02-09T01:27:48.988435121 12.192829s info: Table 2cf18218-ebb0-46a1-938f-350e8eb75cbd: This server is Raft leader for term 1. Latest log index is 0.
