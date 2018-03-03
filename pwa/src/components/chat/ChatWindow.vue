@@ -3,15 +3,19 @@
 		<div class="header">
 			{{ user_name }}
 		</div>
-		<div v-if="emptyConversation" class="chat-empty">
+		<div
+			v-if="emptyConversation"
+			class="chat-empty">
 			<div>
 				Why Wait ? Start a conversation
 			</div>
 		</div>
-		<div v-else class="chat-list-container">
+		<div
+			v-else
+			class="chat-list-container">
 			<chat-list
 				v-for="(chat,index) in chats"
-				:owner = "chat.user_id === user_id"
+				:owner="chat.user_id === user_id"
 				:text="chat.text"
 				:key="index"/>
 		</div>
@@ -31,12 +35,11 @@
 </template>
 
 <script>
-import socketCluster from 'socketcluster-client';
 
 export default {
 	name: 'ChatWindow',
 	components: {
-		'chat-list': () => (import('@/components/ChatList'))
+		'chat-list': () => (import('@/components/chat/ChatList'))
 	},
 	props: {
 		user_name: {
@@ -61,41 +64,15 @@ export default {
 		}
 	},
 	created() {
-		this.$_socket = socketCluster.connect({
-			hostname: 'serv.pwa.in',
-			path: '/socketcluster/',
-			connectTimeout: 10000, // milliseconds
-			ackTimeout: 10000, // milliseconds
-			channelPrefix: null,
-			disconnectOnUnload: true,
-			multiplex: true,
-			autoConnect: true,
-			secure: false,
-			rejectUnauthorized: false,
-			autoReconnectOptions: {
-				initialDelay: 10000, // milliseconds
-				randomness: 10000, // milliseconds
-				multiplier: 1.5, // decimal
-				maxDelay: 60000 // milliseconds
-			},
-			authEngine: null,
-			codecEngine: null,
-			subscriptionRetryOptions: {}
-		});
-
-		this.$_socket.on('connect', () => {
-			console.log('CONNECTED');
-		});
-
 		const vm = this;
-		this.$_message_channel = this.$_socket.subscribe(`postMessage${this.user_id}`);
-		this.$_message_channel.watch((data) => {
-			vm.chats.push(data);
-		});
+		// this.$_message_channel = this.$_socket.subscribe(`post_message{this.user_id}`);
+		// this.$_message_channel.watch((data) => {
+		// 	vm.chats.push(data);
+		// });
 	},
 	methods: {
 		onSubmitText() {
-			this.$_socket.emit('chat', {
+			this.$_socket.publish('chat', {
 				user_id: this.user_id,
 				to_user_id: this.to_user_id,
 				text: this.$refs.reply_text.value
@@ -112,54 +89,54 @@ export default {
 </script>
 
 <style scoped>
-	.container {
-		display: flex;
-		border: 1px solid #42b983;
-		margin: 5px 5px;
-		flex: 1;
-		flex-direction: column;
-	}
+    .container {
+        display: flex;
+        border: 1px solid #42b983;
+        margin: 5px 5px;
+        flex: 1;
+        flex-direction: column;
+    }
 
-	.container .header {
-		display: block;
-		margin: 0px auto;
-		height: min-content;
-		width: 100%;
-		background-color: #42b983;
-		padding: 9px 0px;
-	}
+    .container .header {
+        display: block;
+        margin: 0px auto;
+        height: min-content;
+        width: 100%;
+        background-color: #42b983;
+        padding: 9px 0px;
+    }
 
-	.chat-list-container, .chat-empty {
-		flex: 1;
-	}
+    .chat-list-container, .chat-empty {
+        flex: 1;
+    }
 
-	.footer {
-		bottom: 0;
-		display: inline-flex;
-		height: 36px;
-	}
+    .footer {
+        bottom: 0;
+        display: inline-flex;
+        height: 36px;
+    }
 
-	.reply-box {
-		font-size: 16px;
-		flex: 1;
-	}
+    .reply-box {
+        font-size: 16px;
+        flex: 1;
+    }
 
-	.big {
-		border-color: transparent;
-		border-width: 1px;
-		background-color: #42b983;
-		color: aliceblue;
-	}
+    .big {
+        border-color: transparent;
+        border-width: 1px;
+        background-color: #42b983;
+        color: aliceblue;
+    }
 
-	.chat-empty {
-		text-align: center;
-		margin: auto;
-		display: inline-flex;
-	}
+    .chat-empty {
+        text-align: center;
+        margin: auto;
+        display: inline-flex;
+    }
 
-	.chat-empty div {
-		height: min-content;
-		margin: auto;
-	}
+    .chat-empty div {
+        height: min-content;
+        margin: auto;
+    }
 
 </style>

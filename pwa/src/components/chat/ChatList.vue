@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="chat-list-item"
-		:class="owner ? 'reverse': ''"
+		:class="!owner ? 'reverse': ''"
 	>
 		<div class="spacer"/>
 		<div class="info">
@@ -23,7 +23,8 @@ export default {
 			type: String
 		},
 		owner: {
-			type: Boolean
+			type: Boolean,
+			default: false
 		}
 	}
 };
