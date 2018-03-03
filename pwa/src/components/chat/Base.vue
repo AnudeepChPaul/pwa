@@ -5,9 +5,11 @@
 		<div class="chat-area">
 			<chat-window
 				user_name="User 1"
+				to_user_id = "2"
 				user_id="1"/>
 			<chat-window
 				user_name="User 2"
+				to_user_id="1"
 				user_id="2"/>
 		</div>
 	</div>
